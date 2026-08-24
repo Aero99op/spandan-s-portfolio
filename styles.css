@@ -2815,62 +2815,408 @@ body.loaded .preloader {
 }
 
 /* ==========================================================================
-   RESPONSIVE BREAKPOINTS
+   RESPONSIVE BREAKPOINTS (ANDROID, iOS & ALL MOBILE DEVICES)
    ========================================================================== */
 
+/* Tablet (iPad / Landscape Tablets) */
 @media (max-width: 1024px) {
+  .hero {
+    padding: 120px 0 70px;
+    min-height: auto;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 48px;
     text-align: center;
   }
   .hero-text { order: 2; }
   .hero-visual { order: 1; }
   .hero-sub { margin-inline: auto; }
-  .hero-actions, .hero-socials, .hero-typewriter-stack { justify-content: center; align-items: center; }
-  .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about-visual { max-width: 400px; margin-inline: auto; width: 100%; }
+  .hero-actions, .hero-socials, .hero-typewriter-stack {
+    justify-content: center;
+    align-items: center;
+  }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-visual { max-width: 440px; margin-inline: auto; width: 100%; }
+  .education-grid { grid-template-columns: 1fr; }
   .skills-grid-new { grid-template-columns: 1fr; }
   .certifications-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .achievements-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   #typed { min-width: 0; }
 }
 
+/* Medium Tablets & Large Mobiles (Foldables, iPad Mini, iPhone Plus/Max) */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 14px 5vw;
+  }
   .hamburger { display: flex; }
   .nav-hire { display: none; }
+  
   .nav-links {
     position: fixed;
     inset: 0;
     flex-direction: column;
     justify-content: center;
-    gap: 22px;
+    align-items: center;
+    gap: 16px;
     background: var(--bg-translucent);
-    backdrop-filter: blur(28px) saturate(180%);
-    -webkit-backdrop-filter: blur(28px) saturate(180%);
-    clip-path: circle(0% at calc(100% - 50px) 35px);
-    transition: clip-path 0.6s var(--ease-smooth);
+    backdrop-filter: blur(32px) saturate(200%);
+    -webkit-backdrop-filter: blur(32px) saturate(200%);
+    clip-path: circle(0% at calc(100% - 45px) 35px);
+    transition: clip-path 0.55s var(--ease-smooth);
     z-index: 1001;
+    padding: 24px;
+    padding-top: max(24px, env(safe-area-inset-top));
+    padding-bottom: max(24px, env(safe-area-inset-bottom));
   }
+  
+  .nav-links.open {
+    clip-path: circle(150% at calc(100% - 45px) 35px);
+  }
+  
   .nav-links a {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-family: var(--font-display);
     font-weight: 700;
+    color: var(--text-dim);
+    padding: 10px 24px;
+    border-radius: var(--radius-full);
+    width: min(280px, 85vw);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background: var(--card-solid);
+    border: 1px solid var(--border-strong);
+    transition: all 0.25s ease;
   }
-  .nav-links.open {
-    clip-path: circle(150% at calc(100% - 50px) 35px);
+
+  .nav-links a:hover, .nav-links a.active {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
   }
-  .nav-cta-mobile { display: block; }
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .section { padding: 80px 0; }
+
+  [data-theme="light"] .nav-links a:hover,
+  [data-theme="light"] .nav-links a.active {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+  }
+
+  .nav-cta-mobile {
+    display: block;
+    margin-top: 12px;
+    width: min(280px, 85vw);
+  }
+
+  .section { padding: 75px 0; }
+  
   .section-head {
     grid-template-columns: 1fr;
     grid-template-areas: "tag" "title" "jp";
+    row-gap: 8px;
+    margin-bottom: 42px;
   }
-  .section-watermark, .section-sanskrit, .section-jp { justify-self: start; }
-  .contact-form { padding: 24px; }
-  .back-to-top { right: 18px; bottom: 18px; }
+  
+  .section-watermark, .section-sanskrit, .section-jp {
+    justify-self: start;
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    margin-top: 4px;
+  }
+
+  .hero-ghost {
+    font-size: clamp(4.5rem, 16vw, 10rem);
+    top: 45%;
+  }
+
+  .hero-name {
+    font-size: clamp(2rem, 6.5vw, 3rem);
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .interests-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .contact-form {
+    padding: 26px 20px;
+  }
+
+  .back-to-top {
+    right: 18px;
+    bottom: 20px;
+    width: 44px;
+    height: 44px;
+  }
+
   .scroll-cue { display: none; }
+}
+
+/* Standard Mobile Devices (Android 360px–412px, iPhone 12/13/14/15/16 390px–430px) */
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 92%;
+    padding-inline: 4px;
+  }
+
+  .hero {
+    padding: 100px 0 50px;
+  }
+
+  .hero-kicker {
+    flex-direction: row;
+    gap: 8px;
+    padding: 4px 12px 4px 4px;
+    max-width: 100%;
+  }
+
+  .kicker-txt {
+    font-size: 0.76rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero-name {
+    font-size: 2.1rem;
+    margin: 4px 0 10px;
+  }
+
+  .hero-typewriter-stack {
+    min-height: 60px;
+  }
+
+  .typed-text-box {
+    font-size: 1.25rem;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-socials {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* Safe orbital chips on mobile */
+  .avatar-frame {
+    padding: 12px;
+    max-width: 270px;
+  }
+
+  .avatar-orbit {
+    width: 240px;
+  }
+
+  .chip {
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .chip i {
+    width: 22px;
+    height: 22px;
+    font-size: 0.72rem;
+  }
+
+  .chip-text small {
+    font-size: 0.56rem;
+  }
+
+  .chip-text span {
+    font-size: 0.74rem;
+  }
+
+  .chip-1 { top: -6px; left: -10px; }
+  .chip-2 { top: 48%; right: -12px; }
+  .chip-3 { bottom: -6px; left: -4px; }
+
+  /* About section mobile cards */
+  .about-card {
+    padding: 26px 18px;
+  }
+
+  .about-photo {
+    width: 86px;
+    height: 86px;
+  }
+
+  .about-avatar {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 14px;
+  }
+
+  .contact-pill-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .about-badges span {
+    font-size: 0.74rem;
+    padding: 4px 10px;
+  }
+
+  .about-content .lead-text {
+    font-size: 1.05rem;
+  }
+
+  .about-content p {
+    font-size: 0.94rem;
+  }
+
+  .about-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .about-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Mobile Grid Cards */
+  .edu-card, .cert-card, .achievement-card, .skills-card, .project-card {
+    padding: 22px 18px;
+    gap: 14px;
+  }
+
+  .edu-title, .cert-body h3, .project-title-row h3, .achieve-body h3 {
+    font-size: 1.15rem;
+  }
+
+  .pip-install-box {
+    padding: 8px 10px;
+    font-size: 0.78rem;
+  }
+
+  .pip-code {
+    font-size: 0.78rem;
+  }
+
+  /* Interests on small screens */
+  .interests-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .interest-card {
+    padding: 20px 14px;
+  }
+
+  .interest-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+
+  .interest-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .interest-card p {
+    font-size: 0.8rem;
+  }
+
+  /* Contact Form iOS Zoom Prevention */
+  .field input, .field textarea {
+    font-size: 16px !important;
+    padding: 13px 15px;
+  }
+
+  .contact-details-list li {
+    gap: 12px;
+  }
+
+  .cicon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  /* Footer on mobile */
+  .footer {
+    padding: 40px 0 28px;
+  }
+
+  .footer-socials {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Compact Mobile Screens (iPhone SE, Galaxy Fold cover, 320px–375px) */
+@media (max-width: 380px) {
+  html {
+    font-size: 14px;
+  }
+
+  .hero-name {
+    font-size: 1.85rem;
+  }
+
+  .avatar-orbit {
+    width: 210px;
+  }
+
+  .chip-1 { top: -8px; left: -4px; }
+  .chip-2 { top: 48%; right: -6px; }
+  .chip-3 { bottom: -8px; left: 0px; }
+
+  .cert-footer, .edu-footer, .achieve-footer {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .cert-domain-tag, .edu-tag, .achieve-tag {
+    max-width: 100%;
+  }
+
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .stat {
+    padding: 16px 8px;
+  }
+
+  .stat h3 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
