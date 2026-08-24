@@ -260,18 +260,24 @@ backToTop.addEventListener("click", () => {
 // Mobile Hamburger Menu
 const hamburger = $("#hamburger");
 const navLinks = $("#navLinks");
+const navbar = $("#navbar");
+
+function setMenuState(isOpen) {
+  navLinks.classList.toggle("open", isOpen);
+  hamburger.classList.toggle("open", isOpen);
+  navbar.classList.toggle("menu-open", isOpen);
+  document.body.classList.toggle("nav-open", isOpen);
+  document.body.style.overflow = isOpen ? "hidden" : "";
+}
 
 hamburger.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-  hamburger.classList.toggle("open", isOpen);
-  document.body.style.overflow = isOpen ? "hidden" : "";
+  const isOpen = !navLinks.classList.contains("open");
+  setMenuState(isOpen);
 });
 
 $$(".nav-links a").forEach((a) => {
   a.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    hamburger.classList.remove("open");
-    document.body.style.overflow = "";
+    setMenuState(false);
   });
 });
 
