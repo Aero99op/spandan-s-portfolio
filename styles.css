@@ -1404,6 +1404,103 @@ body.loaded .preloader {
   margin-top: 4px;
 }
 
+/* Core Strengths & Interpersonal Pillars */
+.strengths-box {
+  background: var(--card);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  margin: 26px 0 28px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.strengths-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(45deg, transparent, transparent 6px, var(--hatch-color) 6px, var(--hatch-color) 7px);
+  pointer-events: none;
+}
+
+.strengths-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--acc1);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.strength-card {
+  background: var(--card-solid);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: transform 0.25s var(--ease-spring), border-color 0.25s ease;
+}
+
+.strength-card:hover {
+  transform: translateY(-3px);
+  border-color: #ffffff;
+}
+
+[data-theme="light"] .strength-card:hover {
+  border-color: #000000;
+}
+
+.strength-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #000000;
+  display: grid;
+  place-items: center;
+  font-size: 0.92rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .strength-icon {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.strength-info strong {
+  display: block;
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: var(--text-pure);
+  margin-bottom: 3px;
+}
+
+.strength-info p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}
+
 .about-actions {
   display: flex;
   gap: 16px;
