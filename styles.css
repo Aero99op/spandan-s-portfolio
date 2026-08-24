@@ -1212,8 +1212,7 @@ body.loaded .preloader {
 }
 
 .about-card {
-  position: sticky;
-  top: 86px;
+  position: relative;
   background: var(--card);
   border: 1.5px solid var(--border-strong);
   border-radius: var(--radius-lg);
@@ -1222,9 +1221,15 @@ body.loaded .preloader {
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow-lg);
   transform-style: preserve-3d;
-  position: relative;
   overflow: hidden;
   transition: transform 0.3s var(--ease-spring), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (min-width: 1025px) {
+  .about-card {
+    position: sticky;
+    top: 86px;
+  }
 }
 
 .about-card:hover {
@@ -3003,6 +3008,7 @@ body.loaded .preloader {
   }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-visual { max-width: 440px; margin-inline: auto; width: 100%; }
+  .about-card { position: static !important; top: auto !important; }
   .education-grid { grid-template-columns: 1fr; }
   .skills-grid-new { grid-template-columns: 1fr; }
   .certifications-grid { grid-template-columns: 1fr; }
