@@ -1200,8 +1200,8 @@ body.loaded .preloader {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 340px 1fr;
-  gap: 48px;
+  grid-template-columns: 375px 1fr;
+  gap: 52px;
   align-items: start;
 }
 
@@ -1212,11 +1212,11 @@ body.loaded .preloader {
 
 .about-card {
   position: sticky;
-  top: 100px;
+  top: 86px;
   background: var(--card);
   border: 1.5px solid var(--border-strong);
   border-radius: var(--radius-lg);
-  padding: 34px 24px;
+  padding: 42px 30px;
   text-align: center;
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow-lg);
@@ -1245,14 +1245,20 @@ body.loaded .preloader {
 }
 
 .about-avatar {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 16px;
+  width: 136px;
+  height: 136px;
+  min-width: 136px;
+  min-height: 136px;
+  max-width: 136px;
+  max-height: 136px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 18px;
   border-radius: 50%;
+  flex-shrink: 0;
   display: grid;
   place-items: center;
-  border: 2px solid #ffffff;
-  box-shadow: 0 12px 30px -8px rgba(255, 255, 255, 0.25);
+  border: 3px solid #ffffff;
+  box-shadow: 0 14px 36px -8px rgba(255, 255, 255, 0.3);
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -1260,12 +1266,13 @@ body.loaded .preloader {
 
 [data-theme="light"] .about-avatar {
   border-color: #000000;
-  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 14px 36px -8px rgba(0, 0, 0, 0.22);
 }
 
 .about-photo {
   width: 100%;
   height: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center 15%;
   border-radius: 50%;
@@ -1274,7 +1281,7 @@ body.loaded .preloader {
 
 .about-card h3 {
   font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: 1.55rem;
   font-weight: 800;
   color: var(--text-pure);
   position: relative;
@@ -1282,9 +1289,9 @@ body.loaded .preloader {
 }
 
 .role-sub {
-  margin-top: 4px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  margin-top: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
   letter-spacing: 0.08em;
   color: var(--muted);
   text-transform: uppercase;
