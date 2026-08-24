@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spandan Prayas Patra — AI Coder, AI/ML &amp; System Design Architect</title>
+  <meta name="description" content="Spandan Prayas Patra — AI Coder, AI/ML Engineer, System Design &amp; Cloud Architect. Building high-velocity intelligent systems, cloud backends, and DevOps infrastructure." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%23ffffff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%23000000' stroke='%23ffffff' stroke-width='3'/%3E%3Ctext x='50' y='72' font-size='62' font-family='sans-serif' font-weight='900' text-anchor='middle' fill='%23ffffff'%3ES%3C/text%3E%3C/svg%3E" />
+  
+  <!-- Premium Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="manga-badge-top">AI CODER // SYSTEM READY</div>
+      <div class="preloader-word" aria-hidden="true">
+        <span>S</span><span>P</span><span>A</span><span>N</span><span>D</span><span>A</span><span>N</span>
+      </div>
+      <div class="preloader-sub">SPANDAN PRAYAS PATRA</div>
+      <div class="preloader-bar"><i></i></div>
+    </div>
+  </div>
+
+  <!-- Custom Manga Ink Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Anime Canvas (Monochrome Ink Sparks & Petals) -->
+  <canvas id="petals" aria-hidden="true"></canvas>
+
+  <!-- Side Watermark Tag -->
+  <div class="side-tag" aria-hidden="true">
+    <span>SYSTEM ARCHITECTURE</span> · AI CODER · SPANDAN PRAYAS PATRA · <span>ENGINEERING</span>
+  </div>
+
+  <!-- Reading Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="logo">
+      <span class="logo-text">SPANDAN<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#about"><i class="fa-solid fa-user-ninja"></i> About</a>
+      <a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+      <a href="#skills"><i class="fa-solid fa-bolt"></i> Skills &amp; Tools</a>
+      <a href="#certifications"><i class="fa-solid fa-award"></i> Courses &amp; Certs</a>
+      <a href="#projects"><i class="fa-solid fa-code-branch"></i> Projects</a>
+      <a href="#interests"><i class="fa-solid fa-gamepad"></i> Interests</a>
+      <a href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+      <div class="nav-cta-mobile">
+        <a href="#contact" class="btn btn-primary btn-sm"><i class="fa-solid fa-envelope"></i> Get In Touch</a>
+      </div>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark / light theme" title="Switch Mode">
+        <i class="fa-solid fa-sun sun-icon"></i>
+        <i class="fa-solid fa-moon moon-icon"></i>
+      </button>
+      <a href="#contact" class="btn btn-primary btn-sm nav-hire"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Open Navigation Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-ghost" aria-hidden="true">SPANDAN</div>
+      <div class="manga-speedlines" aria-hidden="true"></div>
+      
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <div class="hero-kicker reveal">
+            <span class="kicker-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> AI CODER</span>
+            <span class="kicker-txt">System Design · AI Models · Cloud Engineering</span>
+          </div>
+
+          <!-- Hero Heading & Typewriter Stack -->
+          <div class="hero-heading-box reveal" data-delay="1">
+            <div class="hero-greeting">Hi, I'm</div>
+            <h1 class="hero-name pure-white-text">Spandan Prayas Patra</h1>
+            
+            <div class="hero-typewriter-stack">
+              <div class="building-tag">
+                <i class="fa-solid fa-terminal"></i>
+                <span>Building</span>
+              </div>
+              <div class="typed-text-box">
+                <span id="typed"></span><span class="caret"></span>
+              </div>
+            </div>
+          </div>
+
+          <p class="hero-sub reveal" data-delay="2">
+            AI coder &amp; system design architect building at lightning speed with AI orchestration, MCPs, and open-source models. Bridging low-level code (C, Python, PHP) with scalable cloud backends, modern edge platforms (Vercel, Cloudflare, Render), and DevOps precision.
+          </p>
+
+          <div class="hero-actions reveal" data-delay="3">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i> Explore Projects
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              <i class="fa-solid fa-comments"></i> Initiate Signal
+            </a>
+          </div>
+
+          <div class="hero-socials reveal" data-delay="4">
+            <a href="mailto:spandanpatra1234@gmail.com" aria-label="Email Spandan" title="Email: spandanpatra1234@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+917848033183" aria-label="Call Spandan" title="Phone: +91 78480 33183"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://github.com/Aero99op" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" title="GitHub: Aero99op"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/spandan-prayas-patra-874479307/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://neksuss.space" target="_blank" rel="noopener noreferrer" aria-label="Neksuss Space" title="neksuss.space"><i class="fa-solid fa-globe"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-delay="2">
+          <div class="avatar-frame">
+            <div class="avatar-corner c-tl"></div>
+            <div class="avatar-corner c-tr"></div>
+            <div class="avatar-corner c-bl"></div>
+            <div class="avatar-corner c-br"></div>
+            
+            <div class="avatar-orbit">
+              <div class="avatar-ring"></div>
+              <div class="avatar-dash"></div>
+              
+              <!-- Orbital Ring: User Profile Photo with Rounded Crop & Centered Fit -->
+              <div class="avatar">
+                <img src="profile.jpg" alt="Spandan Prayas Patra" class="avatar-photo" />
+              </div>
+              
+              <div class="chip chip-1">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <div class="chip-text">
+                  <small>STYLE</small>
+                  <span>AI Coder</span>
+                </div>
+              </div>   </div>
+
+              <div class="chip chip-2">
+                <i class="fa-solid fa-diagram-project"></i>
+                <div class="chip-text">
+                  <small>ARCH</small>
+                  <span>System Design</span>
+                </div>
+              </div>
+
+              <div class="chip chip-3">
+                <i class="fa-solid fa-microchip"></i>
+                <div class="chip-text">
+                  <small>CORE</small>
+                  <span>AI &amp; DevOps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+        <span></span>
+        <small>SCROLL</small>
+      </a>
+    </section>
+
+    <!-- Marquee Banner -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>AI Coder</span><i>✦</i>
+          <span>System Design</span><i>✦</i>
+          <span>VS Code &amp; Cursor</span><i>✦</i>
+          <span>Vercel &amp; Cloudflare Pages</span><i>✦</i>
+          <span>AI / Machine Learning</span><i>✦</i>
+          <span>EduvateSkills &amp; Sparkadix Certified</span><i>✦</i>
+          <span>IBM · Coursera · NPTEL</span><i>✦</i>
+          <span>AWS &amp; DevOps Architecture</span><i>✦</i>
+          <span>C · Python · PHP</span><i>✦</i>
+        </div>
+        <div class="marquee-group">
+          <span>AI Coder</span><i>✦</i>
+          <span>System Design</span><i>✦</i>
+          <span>VS Code &amp; Cursor</span><i>✦</i>
+          <span>Vercel &amp; Cloudflare Pages</span><i>✦</i>
+          <span>AI / Machine Learning</span><i>✦</i>
+          <span>EduvateSkills &amp; Sparkadix Certified</span><i>✦</i>
+          <span>IBM · Coursera · NPTEL</span><i>✦</i>
+          <span>AWS &amp; DevOps Architecture</span><i>✦</i>
+          <span>C · Python · PHP</span><i>✦</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-user-ninja"></i> Profile Overview</span>
+          <h2>The Mind Behind<br /><span class="pure-white-text">The Engineering</span></h2>
+          <span class="section-watermark">ABOUT ME</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="about-card tilt">
+              <div class="about-avatar">
+                <img src="profile.jpg" alt="Spandan Prayas Patra" class="about-photo" />
+              </div>
+              <h3>Spandan Prayas Patra</h3>
+              <p class="role-sub">AI Coder · System Design · AI/ML Specialist</p>
+              
+              <div class="contact-pill-bar">
+                <a href="mailto:spandanpatra1234@gmail.com" class="pill-link"><i class="fa-solid fa-envelope"></i> Email</a>
+                <a href="tel:+917848033183" class="pill-link"><i class="fa-solid fa-phone"></i> +91 78480 33183</a>
+              </div>
+
+              <div class="about-badges">
+                <span><i class="fa-solid fa-wand-magic-sparkles"></i> AI Coder</span>
+                <span><i class="fa-solid fa-diagram-project"></i> System Design</span>
+                <span><i class="fa-solid fa-certificate"></i> AI &amp; Cloud Certified</span>
+                <span><i class="fa-solid fa-code"></i> VS Code &amp; Cursor</span>
+                <span><i class="fa-solid fa-cloud"></i> Vercel &amp; Cloudflare</span>
+                <span><i class="fa-solid fa-robot"></i> AI Orchestration</span>
+                <span><i class="fa-solid fa-server"></i> AWS &amp; DevOps</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <p class="reveal lead-text">
+              I am <strong>Spandan Prayas Patra</strong> — an <strong>AI Coder &amp; System Design Architect</strong> building at the bleeding edge where computational intelligence meets modern distributed cloud and edge infrastructure.
+            </p>
+            <p class="reveal" data-delay="1">
+              My engineering stack merges core foundations in <strong>C, Python, and PHP</strong> with modern AI-augmented workflows using <strong>VS Code, Cursor, Antigravity, Codex, Claude Code, OpenCode, Model Context Protocol (MCPs), and Open-Source AI Models</strong>.
+            </p>
+            <p class="reveal" data-delay="2">
+              On the infrastructure side, I architect and deploy robust web services and systems across <strong>AWS (EC2, S3, Lambda, VPC), Vercel, Cloudflare Pages &amp; Workers, Render, and Northflank</strong>, backed by automated <strong>Terraform, Docker, and Kubernetes</strong> pipelines.
+            </p>
+
+            <div class="stats reveal" data-delay="3">
+              <div class="stat">
+                <h3><span class="counter" data-target="6">0</span></h3>
+                <p>Major Projects</p>
+                <div class="stat-hatch"></div>
+              </div>
+              <div class="stat">
+                <h3><span class="counter" data-target="9">0</span>+</h3>
+                <p>Certs &amp; Internships</p>
+                <div class="stat-hatch"></div>
+              </div>
+              <div class="stat">
+                <h3><span class="counter" data-target="12">0</span>+</h3>
+                <p>Cloud Platforms</p>
+                <div class="stat-hatch"></div>
+              </div>
+              <div class="stat">
+                <h3><span class="counter" data-target="100">0</span>%</h3>
+                <p>Flow State &amp; Focus</p>
+                <div class="stat-hatch"></div>
+              </div>
+            </div>
+
+            <div class="about-actions reveal" data-delay="4">
+              <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Contact Spandan</a>
+              <a href="#certifications" class="btn btn-ghost"><i class="fa-solid fa-graduation-cap"></i> View Credentials</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academic Foundations</span>
+          <h2>Educational<br /><span class="pure-white-text">Journey &amp; Qualifications</span></h2>
+          <span class="section-watermark">ACADEMICS</span>
+        </div>
+
+        <div class="education-grid">
+          <!-- 1. B.Tech CSE (AIML) - GEC Autonomous College -->
+          <div class="edu-card tilt reveal">
+            <div class="edu-top">
+              <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="edu-status-pill live">
+                <span class="pulse-dot"></span>
+                <span>2023 — Present · Pursuing</span>
+              </div>
+            </div>
+            
+            <div class="edu-body">
+              <div class="edu-meta-row">
+                <span class="edu-degree-type">Bachelor of Technology (B.Tech)</span>
+                <span class="edu-score-badge highlight"><i class="fa-solid fa-chart-line"></i> 8.43 CGPA</span>
+              </div>
+              <h3 class="edu-title">B.Tech CSE (AI &amp; ML)</h3>
+              <div class="edu-institute">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>GEC Autonomous College</span>
+              </div>
+              <div class="edu-place">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Bhubaneswar (BBSR), Odisha</span>
+              </div>
+            </div>
+
+            <div class="edu-footer">
+              <span class="edu-tag">Undergraduate</span>
+              <span class="edu-footer-score">8.43 CGPA</span>
+            </div>
+          </div>
+
+          <!-- 2. 12th - Rajdhani Higher Secondary School -->
+          <div class="edu-card tilt reveal" data-delay="1">
+            <div class="edu-top">
+              <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+              <div class="edu-status-pill">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>2021 — 2023 · Completed</span>
+              </div>
+            </div>
+            
+            <div class="edu-body">
+              <div class="edu-meta-row">
+                <span class="edu-degree-type">Higher Secondary (12th)</span>
+                <span class="edu-score-badge"><i class="fa-solid fa-percent"></i> 60.5%</span>
+              </div>
+              <h3 class="edu-title">12th Standard (Science)</h3>
+              <div class="edu-institute">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Rajdhani Higher Secondary School</span>
+              </div>
+              <div class="edu-place">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Bhubaneswar (BBSR), Odisha</span>
+              </div>
+            </div>
+
+            <div class="edu-footer">
+              <span class="edu-tag">Higher Secondary</span>
+              <span class="edu-footer-score">60.5%</span>
+            </div>
+          </div>
+
+          <!-- 3. 10th - Saraswati Sishu Vidya Mandir, Bhimatangi -->
+          <div class="edu-card tilt reveal" data-delay="2">
+            <div class="edu-top">
+              <div class="edu-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+              <div class="edu-status-pill">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>2011 — 2021 · Completed</span>
+              </div>
+            </div>
+            
+            <div class="edu-body">
+              <div class="edu-meta-row">
+                <span class="edu-degree-type">Secondary School (10th)</span>
+                <span class="edu-score-badge highlight"><i class="fa-solid fa-percent"></i> 81%</span>
+              </div>
+              <h3 class="edu-title">10th Standard (Matriculation)</h3>
+              <div class="edu-institute">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Saraswati Sishu Vidya Mandir, Bhimatangi</span>
+              </div>
+              <div class="edu-place">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Bhubaneswar (BBSR), Odisha</span>
+              </div>
+            </div>
+
+            <div class="edu-footer">
+              <span class="edu-tag">Matriculation</span>
+              <span class="edu-footer-score">81%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tools Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-bolt"></i> Technical Arsenal</span>
+          <h2>Skills, Architecture &amp;<br /><span class="pure-white-text">Modern AI Stack</span></h2>
+          <span class="section-watermark">CAPABILITIES</span>
+        </div>
+
+        <div class="skills-grid-new">
+          <!-- 1. Programming Languages -->
+          <div class="skills-card reveal">
+            <div class="category-header">
+              <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
+              <div>
+                <h3>Programming Languages</h3>
+                <small>Core development &amp; systems engineering</small>
+              </div>
+            </div>
+
+            <div class="lang-cards-grid">
+              <div class="lang-card">
+                <div class="lang-top">
+                  <span class="lang-name"><i class="fa-solid fa-terminal"></i> C Language</span>
+                  <span class="lang-tag">Low-Level</span>
+                </div>
+                <p>Memory management, high-performance algorithms, data structures, and compute-efficient system logic.</p>
+              </div>
+
+              <div class="lang-card">
+                <div class="lang-top">
+                  <span class="lang-name"><i class="fa-brands fa-python"></i> Python</span>
+                  <span class="lang-tag">AI / Data / Tools</span>
+                </div>
+                <p>Machine learning pipelines, deep learning models, XAI, optimization algorithms, data science &amp; backend services.</p>
+              </div>
+
+              <div class="lang-card">
+                <div class="lang-top">
+                  <span class="lang-name"><i class="fa-brands fa-php"></i> PHP</span>
+                  <span class="lang-tag">Backend / Web</span>
+                </div>
+                <p>Dynamic web application engines, REST API architectures, real-time community platforms, and database connectivity.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Modern AI & Developer Tools -->
+          <div class="skills-card reveal" data-delay="1">
+            <div class="category-header">
+              <div class="cat-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <div>
+                <h3>Modern AI &amp; Dev Ecosystem</h3>
+                <small>IDEs, agentic workflows, model orchestration &amp; tooling</small>
+              </div>
+            </div>
+
+            <div class="chips">
+              <span><i class="fa-solid fa-code"></i> VS Code</span>
+              <span><i class="fa-solid fa-arrow-pointer"></i> Cursor (AI Code Editor)</span>
+              <span><i class="fa-solid fa-meteor"></i> Antigravity (Agentic Coding)</span>
+              <span><i class="fa-solid fa-code-merge"></i> Codex</span>
+              <span><i class="fa-solid fa-terminal"></i> Claude Code (Anthropic)</span>
+              <span><i class="fa-solid fa-laptop-code"></i> OpenCode</span>
+              <span><i class="fa-solid fa-plug"></i> MCPs (Model Context Protocol)</span>
+              <span><i class="fa-solid fa-brain"></i> Open Source AI Models (Llama, DeepSeek, Mistral, Qwen)</span>
+            </div>
+          </div>
+
+          <!-- 3. Modern Cloud & Edge Deployment Platforms -->
+          <div class="skills-card reveal" data-delay="2">
+            <div class="category-header">
+              <div class="cat-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+              <div>
+                <h3>Modern Cloud &amp; Edge Platforms</h3>
+                <small>Global edge hosting, serverless &amp; containerized deployments</small>
+              </div>
+            </div>
+
+            <div class="chips">
+              <span><i class="fa-solid fa-triangle-exclamation" style="transform: rotate(180deg);"></i> Vercel (Edge &amp; Next.js)</span>
+              <span><i class="fa-solid fa-bolt"></i> Cloudflare Pages &amp; Workers</span>
+              <span><i class="fa-solid fa-server"></i> Render (Web Services &amp; DBs)</span>
+              <span><i class="fa-solid fa-cubes"></i> Northflank (Microservices &amp; Containers)</span>
+              <span><i class="fa-brands fa-aws"></i> AWS Enterprise Cloud</span>
+            </div>
+          </div>
+
+          <!-- 4. System Design & Cloud Architecture -->
+          <div class="skills-card reveal" data-delay="1">
+            <div class="category-header">
+              <div class="cat-icon"><i class="fa-solid fa-diagram-project"></i></div>
+              <div>
+                <h3>System Design &amp; Architecture</h3>
+                <small>Scalable distributed topology &amp; reliability</small>
+              </div>
+            </div>
+
+            <div class="chips">
+              <span><i class="fa-solid fa-sitemap"></i> High-Availability Architecture</span>
+              <span><i class="fa-solid fa-cubes-stacked"></i> Microservices &amp; APIs</span>
+              <span><i class="fa-solid fa-shield-halved"></i> Fault Tolerance &amp; Resilience</span>
+              <span><i class="fa-solid fa-bolt"></i> Event-Driven Systems</span>
+              <span><i class="fa-solid fa-database"></i> Database Caching &amp; Sharding</span>
+              <span><i class="fa-solid fa-network-wired"></i> Load Balancing &amp; Traffic Routing</span>
+            </div>
+          </div>
+
+          <!-- 5. AI & Machine Learning -->
+          <div class="skills-card reveal" data-delay="2">
+            <div class="category-header">
+              <div class="cat-icon"><i class="fa-solid fa-brain"></i></div>
+              <div>
+                <h3>AI &amp; Machine Learning</h3>
+                <small>Intelligent algorithms &amp; data modeling</small>
+              </div>
+            </div>
+
+            <div class="chips">
+              <span><i class="fa-solid fa-network-wired"></i> Machine Learning</span>
+              <span><i class="fa-solid fa-magnifying-glass-chart"></i> Explainable AI (XAI)</span>
+              <span><i class="fa-solid fa-circle-nodes"></i> Neural Networks</span>
+              <span><i class="fa-solid fa-dna"></i> Genetic Algorithms</span>
+              <span><i class="fa-solid fa-chart-line"></i> Particle Swarm Optimization</span>
+              <span><i class="fa-solid fa-laptop-code"></i> Scikit-learn</span>
+              <span><i class="fa-solid fa-table"></i> Pandas</span>
+              <span><i class="fa-solid fa-chart-simple"></i> Matplotlib</span>
+            </div>
+          </div>
+
+          <!-- 6. Cloud Infrastructure (AWS) -->
+          <div class="skills-card reveal" data-delay="3">
+            <div class="category-header">
+              <div class="cat-icon"><i class="fa-brands fa-aws"></i></div>
+              <div>
+                <h3>Cloud Infrastructure (AWS)</h3>
+                <small>Enterprise cloud hosting &amp; orchestration</small>
+              </div>
+            </div>
+
+            <div class="chips">
+              <span><i class="fa-solid fa-server"></i> EC2</span>
+              <span><i class="fa-solid fa-database"></i> S3</span>
+              <span><i class="fa-solid fa-network-wired"></i> VPC</span>
+              <span><i class="fa-solid fa-shield-halved"></i> IAM</span>
+              <span><i class="fa-solid fa-bolt-lightning"></i> Lambda</span>
+              <span><i class="fa-solid fa-envelope"></i> SES</span>
+              <span><i class="fa-solid fa-hard-drive"></i> EBS</span>
+              <span><i class="fa-solid fa-folder-tree"></i> EFS</span>
+            </div>
+          </div>
+
+          <!-- 7. DevOps & Infrastructure as Code -->
+          <div class="skills-card reveal" data-delay="1">
+            <div class="category-header">
+              <div class="cat-icon"><i class="fa-solid fa-gears"></i></div>
+              <div>
+                <h3>DevOps &amp; Infrastructure as Code</h3>
+                <small>Automated pipelines, containers &amp; scaling</small>
+              </div>
+            </div>
+
+            <div class="chips">
+              <span><i class="fa-solid fa-layer-group"></i> Terraform</span>
+              <span><i class="fa-solid fa-cubes"></i> Kubernetes</span>
+              <span><i class="fa-solid fa-file-code"></i> Infrastructure as Code (IaC)</span>
+              <span><i class="fa-solid fa-arrows-spin"></i> CI/CD Pipelines</span>
+              <span><i class="fa-brands fa-docker"></i> Docker Containers</span>
+              <span><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses, Internships & Certifications Section (With View Certificate PDF buttons) -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-award"></i> Verified Credentials</span>
+          <h2>Courses, Internships &amp;<br /><span class="pure-white-text">Verified Certifications</span></h2>
+          <span class="section-watermark">CREDENTIALS</span>
+        </div>
+
+        <div class="certifications-grid">
+          <!-- 1. Artificial Intelligence Fundamentals -->
+          <div class="cert-card tilt reveal">
+            <div class="cert-top">
+              <div class="cert-icon"><i class="fa-solid fa-brain"></i></div>
+              <span class="cert-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer"><i class="fa-solid fa-graduation-cap"></i> AI Certification</span>
+              <h3>Artificial Intelligence Fundamentals</h3>
+              <p>Foundational principles of intelligent agents, search heuristics, knowledge representation, and machine learning pipelines.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-domain-tag">AI Fundamentals</span>
+              <a href="artificail%20intelligence%20fundamentals.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-view" aria-label="View Artificial Intelligence Fundamentals Certificate">
+                <i class="fa-solid fa-file-pdf"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. EduvateSkills & Sparkadix Certificate (Cloud & DevOps Virtual Internship) -->
+          <div class="cert-card tilt reveal" data-delay="1">
+            <div class="cert-top">
+              <div class="cert-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+              <span class="cert-badge"><i class="fa-solid fa-circle-check"></i> Internship</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer"><i class="fa-solid fa-building-columns"></i> Eduvate Skills &amp; Sparkadix Technologies</span>
+              <h3>Cloud Computing &amp; DevOps Internship</h3>
+              <p>Hands-on enterprise cloud architecture orchestration, CI/CD pipeline automation, container workflows, and distributed system engineering.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-domain-tag">Cloud &amp; DevOps</span>
+              <a href="eduvateskills%20certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-view" aria-label="View EduvateSkills Certificate">
+                <i class="fa-solid fa-file-pdf"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. EduvateSkills & Sparkadix Certificate 1 (Training & Experience) -->
+          <div class="cert-card tilt reveal" data-delay="2">
+            <div class="cert-top">
+              <div class="cert-icon"><i class="fa-solid fa-server"></i></div>
+              <span class="cert-badge"><i class="fa-solid fa-circle-check"></i> Internship</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer"><i class="fa-solid fa-building-columns"></i> Eduvate Skills &amp; Sparkadix Technologies</span>
+              <h3>Cloud &amp; DevOps Training Certification</h3>
+              <p>Practical implementation of cloud deployment topology, scalable server architectures, infrastructure monitoring, and DevOps best practices.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-domain-tag">Cloud &amp; DevOps</span>
+              <a href="eduvateskills%20certificate%201.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-view" aria-label="View EduvateSkills Training Certificate">
+                <i class="fa-solid fa-file-pdf"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Introduction to Deep Learning -->
+          <div class="cert-card tilt reveal">
+            <div class="cert-top">
+              <div class="cert-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+              <span class="cert-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer"><i class="fa-solid fa-graduation-cap"></i> Deep Learning Course</span>
+              <h3>Introduction to Deep Learning</h3>
+              <p>Deep neural network architectures, gradient descent backpropagation, multi-layer perceptrons, activation functions, and model convergence.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-domain-tag">Deep Learning</span>
+              <a href="introduction%20to%20deep%20learning.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-view" aria-label="View Introduction to Deep Learning Certificate">
+                <i class="fa-solid fa-file-pdf"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Python for AI, ML & Data Science (IBM via Coursera) -->
+          <div class="cert-card tilt reveal" data-delay="1">
+            <div class="cert-top">
+              <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+              <span class="cert-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer"><i class="fa-solid fa-building"></i> IBM (via Coursera)</span>
+              <h3>Python for AI, ML &amp; Data Science</h3>
+              <p>Comprehensive Python engineering for data science, Pandas, NumPy, REST APIs, HTTP web requests, and intelligent data pipeline modeling.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-domain-tag">IBM / Coursera</span>
+              <a href="python%20for%20ai,ml,ds.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-view" aria-label="View Python for AI, ML & DS Certificate">
+                <i class="fa-solid fa-file-pdf"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. Python for Machine Learning -->
+          <div class="cert-card tilt reveal" data-delay="2">
+            <div class="cert-top">
+              <div class="cert-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <span class="cert-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer"><i class="fa-solid fa-graduation-cap"></i> Machine Learning Course</span>
+              <h3>Python for Machine Learning</h3>
+              <p>Supervised and unsupervised learning with Scikit-learn, feature engineering, cross-validation, and predictive classification algorithms.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-domain-tag">Machine Learning</span>
+              <a href="python%20for%20machine%20learning.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-view" aria-label="View Python for Machine Learning Certificate">
+                <i class="fa-solid fa-file-pdf"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- 7. Python Fundamentals for Beginners -->
+          <div class="cert-card tilt reveal">
+            <div class="cert-top">
+              <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+              <span class="cert-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer"><i class="fa-solid fa-graduation-cap"></i> Core Programming</span>
+              <h3>Python Fundamentals for Beginners</h3>
+              <p>Essential syntax mastery, data structures, conditional execution, loops, function definitions, and modular programming concepts.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-domain-tag">Python Core</span>
+              <a href="python%20fundamentals%20for%20beginners.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-view" aria-label="View Python Fundamentals Certificate">
+                <i class="fa-solid fa-file-pdf"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- 8. Introduction to Internet of Things (IoT) - NPTEL -->
+          <div class="cert-card tilt reveal" data-delay="1">
+            <div class="cert-top">
+              <div class="cert-icon"><i class="fa-solid fa-microchip"></i></div>
+              <span class="cert-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer"><i class="fa-solid fa-graduation-cap"></i> NPTEL (IIT)</span>
+              <h3>Introduction to Internet of Things (IoT)</h3>
+              <p>Sensors &amp; actuator integration, embedded systems protocols, wireless communication networks, and cloud IoT architecture topology.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-domain-tag">IoT &amp; Systems</span>
+              <a href="nptel%20iot%20certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-view" aria-label="View NPTEL IoT Certificate">
+                <i class="fa-solid fa-file-pdf"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- 9. Artificial Intelligence Training - Acmegrade & Mood Indigo IIT Bombay -->
+          <div class="cert-card tilt reveal" data-delay="2">
+            <div class="cert-top">
+              <div class="cert-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <span class="cert-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer"><i class="fa-solid fa-graduation-cap"></i> Acmegrade · Mood Indigo (IIT Bombay)</span>
+              <h3>Artificial Intelligence Training</h3>
+              <p>Completed intensive training in Artificial Intelligence with verified competency in AI algorithms, intelligent models, and practical implementations.</p>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-domain-tag">AI Specialist</span>
+              <a href="acmegrade%20artificial%20intelligence%20certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-view" aria-label="View Acmegrade AI Certificate">
+                <i class="fa-solid fa-file-pdf"></i> View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-code-branch"></i> Engineering Showcase</span>
+          <h2>Featured<br /><span class="pure-white-text">Projects &amp; Systems</span></h2>
+          <span class="section-watermark">PROJECTS</span>
+        </div>
+
+        <div class="projects-grid">
+          <!-- 1. Enlang -->
+          <article class="project-card tilt reveal">
+            <div class="project-cover cover-1">
+              <div class="cover-pattern"></div>
+              <i class="fa-solid fa-terminal"></i>
+            </div>
+            <div class="project-body">
+              <div class="project-title-row">
+                <h3>Enlang</h3>
+                <span class="project-category">Programming Language</span>
+              </div>
+              <p>An English-based programming language engineered to make programming intuitive and readable using natural English syntax, structured grammar rules, and efficient parsing execution.</p>
+              
+              <!-- pip install enlang terminal snippet -->
+              <div class="pip-install-box" onclick="copyCommand('pip install enlang', this)" title="Click to copy command">
+                <div class="pip-label"><i class="fa-solid fa-terminal"></i> CLI INSTALL</div>
+                <div class="pip-code"><code>pip install enlang</code> <i class="fa-regular fa-copy pip-copy-icon"></i></div>
+              </div>
+
+              <div class="tags">
+                <span>Programming Language</span>
+                <span>Lexer &amp; Parser</span>
+                <span>English-Based</span>
+                <span>System Design</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Aero99op" target="_blank" rel="noopener noreferrer" aria-label="Explore Enlang"><i class="fa-solid fa-arrow-up-right-from-square"></i> Explore Language</a>
+              <a href="https://github.com/Aero99op" target="_blank" rel="noopener noreferrer" aria-label="View Enlang Source Code"><i class="fa-brands fa-github"></i> Repository</a>
+            </div>
+          </article>
+
+          <!-- 2. neksuss.space -->
+          <article class="project-card tilt reveal" data-delay="1">
+            <div class="project-cover cover-2">
+              <div class="cover-pattern"></div>
+              <i class="fa-solid fa-earth-asia"></i>
+            </div>
+            <div class="project-body">
+              <div class="project-title-row">
+                <h3>neksuss.space</h3>
+                <span class="project-category">Social Media Platform</span>
+              </div>
+              <p>A social media platform built for India at neksuss.space where users can create posts, quick-share updates, report community problems, discuss newspaper articles, play games, and connect seamlessly.</p>
+              <div class="tags">
+                <span>Social Media Platform</span>
+                <span>Posts &amp; Quick Share</span>
+                <span>Problem Reporting</span>
+                <span>News &amp; Games</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://neksuss.space" target="_blank" rel="noopener noreferrer" aria-label="Visit neksuss.space Live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit neksuss.space</a>
+              <a href="https://github.com/Aero99op" target="_blank" rel="noopener noreferrer" aria-label="View Neksuss Source Code"><i class="fa-brands fa-github"></i> Repository</a>
+            </div>
+          </article>
+
+          <!-- 3. StockPilot -->
+          <article class="project-card tilt reveal" data-delay="2">
+            <div class="project-cover cover-3">
+              <div class="cover-pattern"></div>
+              <i class="fa-solid fa-boxes-stacked"></i>
+            </div>
+            <div class="project-body">
+              <div class="project-title-row">
+                <h3>StockPilot</h3>
+                <span class="project-category">Inventory Management</span>
+              </div>
+              <p>A smart inventory management tool built to streamline real-time stock monitoring, automated warehouse level alerts, supply logistics tracking, and inventory replenishment optimization.</p>
+              <div class="tags">
+                <span>Inventory Management</span>
+                <span>Stock Tracking</span>
+                <span>Warehouse Logistics</span>
+                <span>Automation Tool</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Aero99op" target="_blank" rel="noopener noreferrer" aria-label="Explore StockPilot"><i class="fa-solid fa-arrow-up-right-from-square"></i> Learn More</a>
+              <a href="https://github.com/Aero99op" target="_blank" rel="noopener noreferrer" aria-label="View StockPilot Source Code"><i class="fa-brands fa-github"></i> Repository</a>
+            </div>
+          </article>
+
+          <!-- 4. Vortex Esports -->
+          <article class="project-card tilt reveal">
+            <div class="project-cover cover-4">
+              <div class="cover-pattern"></div>
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="project-body">
+              <div class="project-title-row">
+                <h3>Vortex Esports</h3>
+                <span class="project-category">Tournament Platform</span>
+              </div>
+              <p>A dedicated esports tournament website built for competitive gaming ecosystems, featuring automated player and team registrations, dynamic tournament brackets, live match scheduling, and leaderboard results.</p>
+              <div class="tags">
+                <span>Esports Tournament</span>
+                <span>Tournament Engine</span>
+                <span>Live Brackets</span>
+                <span>Web Platform</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://tournament-app-bay-seven.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Explore Vortex Esports Live Portal"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Portal</a>
+              <a href="https://github.com/Aero99op" target="_blank" rel="noopener noreferrer" aria-label="View Vortex Esports Source Code"><i class="fa-brands fa-github"></i> Repository</a>
+            </div>
+          </article>
+
+          <!-- 5. ACX Esports Website -->
+          <article class="project-card tilt reveal" data-delay="1">
+            <div class="project-cover cover-5">
+              <div class="cover-pattern"></div>
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="project-body">
+              <div class="project-title-row">
+                <h3>ACX Esports Website</h3>
+                <span class="project-category">Esports Team Website</span>
+              </div>
+              <p>Official esports team website dedicated to team rosters, competitive achievements, tournament match fixtures, player statistics, and digital media presence.</p>
+              <div class="tags">
+                <span>Esports Team Hub</span>
+                <span>Player Rosters</span>
+                <span>Match Schedules</span>
+                <span>Team Brand Portal</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Aero99op" target="_blank" rel="noopener noreferrer" aria-label="Explore ACX Esports"><i class="fa-solid fa-arrow-up-right-from-square"></i> Team Hub</a>
+              <a href="https://github.com/Aero99op" target="_blank" rel="noopener noreferrer" aria-label="View ACX Esports Source Code"><i class="fa-brands fa-github"></i> Repository</a>
+            </div>
+          </article>
+
+          <!-- 6. MageTool -->
+          <article class="project-card tilt reveal" data-delay="2">
+            <div class="project-cover cover-6">
+              <div class="cover-pattern"></div>
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <div class="project-body">
+              <div class="project-title-row">
+                <h3>MageTool</h3>
+                <span class="project-category">Tool Management Platform</span>
+              </div>
+              <p>A tool management platform designed to organize, discover, orchestrate, and manage developer utilities, workflows, and tools from a centralized interface at magetool.in.</p>
+              <div class="tags">
+                <span>Tool Management</span>
+                <span>Platform Architecture</span>
+                <span>Utility Hub</span>
+                <span>magetool.in</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://magetool.in" target="_blank" rel="noopener noreferrer" aria-label="Explore MageTool Live Portal"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit magetool.in</a>
+              <a href="https://github.com/Aero99op" target="_blank" rel="noopener noreferrer" aria-label="View MageTool Source Code"><i class="fa-brands fa-github"></i> Repository</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Achievements & Honors Section (Not in Navbar) -->
+    <section id="achievements" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-trophy"></i> Honors &amp; Recognition</span>
+          <h2>Key Honors &amp;<br /><span class="pure-white-text">Achievements</span></h2>
+          <span class="section-watermark">AWARDS</span>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- 1. 8th in State Govt. Scholarship Across BBSR -->
+          <div class="achievement-card tilt reveal">
+            <div class="achieve-top">
+              <div class="achieve-icon"><i class="fa-solid fa-medal"></i></div>
+              <span class="achieve-badge"><i class="fa-solid fa-award"></i> Rank #8</span>
+            </div>
+            <div class="achieve-body">
+              <span class="achieve-cat">State Govt. Scholarship</span>
+              <h3>8th Rank in State Govt. Scholarship</h3>
+              <div class="achieve-loc">
+                <i class="fa-solid fa-landmark"></i>
+                <span>Govt. State Scholarship · Across BBSR</span>
+              </div>
+            </div>
+            <div class="achieve-footer">
+              <span class="achieve-tag">State Govt. Merit</span>
+              <span class="achieve-pos">Top 10 in BBSR</span>
+            </div>
+          </div>
+
+          <!-- 2. 1st @ Tech Charades -->
+          <div class="achievement-card tilt reveal" data-delay="1">
+            <div class="achieve-top">
+              <div class="achieve-icon gold"><i class="fa-solid fa-trophy"></i></div>
+              <span class="achieve-badge gold-badge"><i class="fa-solid fa-crown"></i> 1st Place</span>
+            </div>
+            <div class="achieve-body">
+              <span class="achieve-cat">Technical Competition</span>
+              <h3>1st Place @ Tech Charades</h3>
+              <div class="achieve-loc">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Tech Challenge Winner</span>
+              </div>
+            </div>
+            <div class="achieve-footer">
+              <span class="achieve-tag">Tech Contest</span>
+              <span class="achieve-pos winner-pill">Winner 🏆</span>
+            </div>
+          </div>
+
+          <!-- 3. 2nd @ AI Prompt Challenge -->
+          <div class="achievement-card tilt reveal" data-delay="2">
+            <div class="achieve-top">
+              <div class="achieve-icon silver"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <span class="achieve-badge silver-badge"><i class="fa-solid fa-medal"></i> 2nd Place</span>
+            </div>
+            <div class="achieve-body">
+              <span class="achieve-cat">AI Challenge</span>
+              <h3>2nd Place @ AI Prompt Challenge</h3>
+              <div class="achieve-loc">
+                <i class="fa-solid fa-robot"></i>
+                <span>Prompt Engineering Contest</span>
+              </div>
+            </div>
+            <div class="achieve-footer">
+              <span class="achieve-tag">AI Hackathon</span>
+              <span class="achieve-pos runner-pill">Runner-up 🥈</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests & Passions Section -->
+    <section id="interests" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-gamepad"></i> Beyond Code</span>
+          <h2>Interests &amp;<br /><span class="pure-white-text">Creative Horizons</span></h2>
+          <span class="section-watermark">PASSIONS</span>
+        </div>
+
+        <div class="interests-grid reveal">
+          <!-- Gaming -->
+          <div class="interest-card tilt">
+            <div class="interest-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <h3>Gaming</h3>
+            <p>Passionate about competitive mechanics, immersive storytelling, and strategy design in virtual worlds.</p>
+            <span class="interest-tag">Competitive &amp; Tactical</span>
+          </div>
+
+          <!-- Esports -->
+          <div class="interest-card tilt" data-delay="1">
+            <div class="interest-icon"><i class="fa-solid fa-trophy"></i></div>
+            <h3>Esports</h3>
+            <p>Active enthusiast in the esports tournament scene, team dynamics, meta analysis, and production.</p>
+            <span class="interest-tag">Tournaments &amp; Teams</span>
+          </div>
+
+          <!-- Geopolitics -->
+          <div class="interest-card tilt" data-delay="2">
+            <div class="interest-icon"><i class="fa-solid fa-globe"></i></div>
+            <h3>Geopolitics</h3>
+            <p>Analyzing global strategic shifts, international trade routes, tech sovereignty, and macro policy dynamics.</p>
+            <span class="interest-tag">Strategy &amp; Analysis</span>
+          </div>
+
+          <!-- Story Writing -->
+          <div class="interest-card tilt" data-delay="3">
+            <div class="interest-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+            <h3>Story Writing</h3>
+            <p>Crafting intricate lore, world-building, narrative arcs, and character motivations with creative depth.</p>
+            <span class="interest-tag">World-Building &amp; Lore</span>
+          </div>
+
+          <!-- Cooking -->
+          <div class="interest-card tilt" data-delay="4">
+            <div class="interest-icon"><i class="fa-solid fa-fire-burner"></i></div>
+            <h3>Cooking</h3>
+            <p>Experimenting with flavors, culinary balance, and precision techniques in the kitchen — just like building systems.</p>
+            <span class="interest-tag">Culinary Mastery</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-satellite-dish"></i> Transmission Link</span>
+          <h2>Connect With<br /><span class="pure-white-text">Spandan</span></h2>
+          <span class="section-watermark">CONTACT</span>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3 class="reveal">Ready to collaborate on something extraordinary?</h3>
+            <p class="reveal" data-delay="1">
+              Whether you have an ambitious AI/ML initiative, system design challenge, or want to discuss DevOps, gaming, and tech, I am always open to conversation.
+            </p>
+
+            <ul class="contact-details-list">
+              <li class="reveal" data-delay="2">
+                <span class="cicon"><i class="fa-solid fa-envelope"></i></span>
+                <div>
+                  <b>Direct Email</b>
+                  <a href="mailto:spandanpatra1234@gmail.com">spandanpatra1234@gmail.com</a>
+                </div>
+              </li>
+
+              <li class="reveal" data-delay="3">
+                <span class="cicon"><i class="fa-solid fa-phone"></i></span>
+                <div>
+                  <b>Phone / Contact</b>
+                  <a href="tel:+917848033183">+91 78480 33183</a>
+                </div>
+              </li>
+
+              <li class="reveal" data-delay="4">
+                <span class="cicon"><i class="fa-solid fa-location-dot"></i></span>
+                <div>
+                  <b>Location</b>
+                  <span>India (Available for Worldwide Remote)</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-socials reveal" data-delay="5">
+              <a href="mailto:spandanpatra1234@gmail.com" aria-label="Email" title="Send Email: spandanpatra1234@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+              <a href="tel:+917848033183" aria-label="Phone" title="Call Now: +91 78480 33183"><i class="fa-solid fa-phone"></i></a>
+              <a href="https://github.com/Aero99op" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" title="GitHub: Aero99op"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/spandan-prayas-patra-874479307/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://neksuss.space" target="_blank" rel="noopener noreferrer" aria-label="neksuss.space" title="neksuss.space"><i class="fa-solid fa-globe"></i></a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" data-delay="2" id="contactForm" novalidate>
+            <div class="form-banner">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>TRANSMISSION PORTAL</span>
+            </div>
+
+            <div class="field">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="E.g. Spandan / John Doe" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Your Email Address</label>
+              <input type="email" id="email" name="email" placeholder="name@company.com" required />
+            </div>
+
+            <div class="field">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Share your project requirements, inquiries or ideas..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fa-solid fa-paper-plane"></i> Transmit Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="logo">
+        <span class="logo-text">SPANDAN<span class="dot">.</span></span>
+      </a>
+      
+      <p class="footer-desc">
+        Designed &amp; engineered by <strong>Spandan Prayas Patra</strong> — AI Coder, AI/ML &amp; System Design Architect.
+      </p>
+
+      <div class="footer-socials">
+        <a href="mailto:spandanpatra1234@gmail.com" aria-label="Email" title="spandanpatra1234@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+917848033183" aria-label="Phone" title="+91 78480 33183"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://github.com/Aero99op" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" title="GitHub: Aero99op"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/spandan-prayas-patra-874479307/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://neksuss.space" target="_blank" rel="noopener noreferrer" aria-label="neksuss.space" title="neksuss.space"><i class="fa-solid fa-globe"></i></a>
+      </div>
+
+      <p class="copy">
+        &copy; <span id="year"></span> Spandan Prayas Patra. All rights reserved. · AI Coding &amp; System Design Excellence.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating Actions -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top of page" title="Scroll to Top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">Message dispatched successfully! Spandan will get back to you shortly.</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
