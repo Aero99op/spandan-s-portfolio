@@ -62,7 +62,7 @@
     <a href="#home" class="logo">
       <span class="logo-text">SPANDAN<span class="dot">.</span></span>
     </a>
-    <nav class="nav-links" id="navLinks">
+    <nav class="nav-links desktop-nav" id="navLinks">
       <a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a>
       <a href="#about"><i class="fa-solid fa-user-ninja"></i> About</a>
       <a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a>
@@ -71,9 +71,6 @@
       <a href="#projects"><i class="fa-solid fa-code-branch"></i> Projects</a>
       <a href="#interests"><i class="fa-solid fa-gamepad"></i> Interests</a>
       <a href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a>
-      <div class="nav-cta-mobile">
-        <a href="#contact" class="btn btn-primary btn-sm"><i class="fa-solid fa-envelope"></i> Get In Touch</a>
-      </div>
     </nav>
     <div class="nav-actions">
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark / light theme" title="Switch Mode">
@@ -86,6 +83,32 @@
       </button>
     </div>
   </header>
+
+  <!-- Dedicated Fullscreen Mobile Menu Drawer (Direct Root Child of Body) -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a href="#home" class="logo mobile-drawer-logo">
+        <span class="logo-text">SPANDAN<span class="dot">.</span></span>
+      </a>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Navigation Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-links" id="mobileNavLinks">
+      <a href="#home" class="mobile-nav-link active"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+      <a href="#about" class="mobile-nav-link"><i class="fa-solid fa-user-ninja"></i> <span>About</span></a>
+      <a href="#education" class="mobile-nav-link"><i class="fa-solid fa-graduation-cap"></i> <span>Education</span></a>
+      <a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-bolt"></i> <span>Skills &amp; Tools</span></a>
+      <a href="#certifications" class="mobile-nav-link"><i class="fa-solid fa-award"></i> <span>Courses &amp; Certs</span></a>
+      <a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-code-branch"></i> <span>Projects</span></a>
+      <a href="#interests" class="mobile-nav-link"><i class="fa-solid fa-gamepad"></i> <span>Interests</span></a>
+      <a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-paper-plane"></i> <span>Contact</span></a>
+      <div class="mobile-nav-cta">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Get In Touch</a>
+      </div>
+    </nav>
+  </div>
 
   <main>
     <!-- Hero Section -->

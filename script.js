@@ -215,7 +215,7 @@ function startTyping() {
 
 // Navbar Scroll Effect & Scrollspy
 const navbar = $("#navbar");
-const navAnchors = $$(".nav-links a");
+const navAnchors = $$(".desktop-nav a, .mobile-nav-link");
 const sections = $$("section[id]");
 const scrollProgress = $("#scrollProgress");
 const backToTop = $("#backToTop");
@@ -257,25 +257,38 @@ backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Mobile Hamburger Menu
+// Mobile Hamburger Menu & Dedicated Drawer
 const hamburger = $("#hamburger");
-const navLinks = $("#navLinks");
-const navbar = $("#navbar");
+const mobileDrawer = $("#mobileDrawer");
+const mobileDrawerClose = $("#mobileDrawerClose");
+const mobileLinks = $$(".mobile-nav-link, .mobile-nav-cta a");
 
 function setMenuState(isOpen) {
-  navLinks.classList.toggle("open", isOpen);
-  hamburger.classList.toggle("open", isOpen);
-  navbar.classList.toggle("menu-open", isOpen);
+  if (mobileDrawer) {
+    mobileDrawer.classList.toggle("open", isOpen);
+    mobileDrawer.setAttribute("aria-hidden", !isOpen);
+  }
+  if (hamburger) {
+    hamburger.classList.toggle("open", isOpen);
+  }
   document.body.classList.toggle("nav-open", isOpen);
   document.body.style.overflow = isOpen ? "hidden" : "";
 }
 
-hamburger.addEventListener("click", () => {
-  const isOpen = !navLinks.classList.contains("open");
-  setMenuState(isOpen);
-});
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+    const isOpen = mobileDrawer ? !mobileDrawer.classList.contains("open") : false;
+    setMenuState(isOpen);
+  });
+}
 
-$$(".nav-links a").forEach((a) => {
+if (mobileDrawerClose) {
+  mobileDrawerClose.addEventListener("click", () => {
+    setMenuState(false);
+  });
+}
+
+mobileLinks.forEach((a) => {
   a.addEventListener("click", () => {
     setMenuState(false);
   });
