@@ -1200,22 +1200,40 @@ body.loaded .preloader {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 56px;
-  align-items: center;
+  grid-template-columns: 340px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-visual {
+  position: relative;
+  align-self: start;
 }
 
 .about-card {
+  position: sticky;
+  top: 100px;
   background: var(--card);
   border: 1.5px solid var(--border-strong);
   border-radius: var(--radius-lg);
-  padding: 40px 30px;
+  padding: 34px 24px;
   text-align: center;
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow-lg);
   transform-style: preserve-3d;
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s var(--ease-spring), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  border-color: #ffffff;
+  box-shadow: 0 16px 40px -12px rgba(255, 255, 255, 0.2), var(--shadow-lg);
+}
+
+[data-theme="light"] .about-card:hover {
+  border-color: #000000;
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.15), var(--shadow-lg);
 }
 
 .about-card::before {
@@ -1227,17 +1245,22 @@ body.loaded .preloader {
 }
 
 .about-avatar {
-  width: 104px;
-  height: 104px;
-  margin: 0 auto 20px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 16px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   border: 2px solid #ffffff;
-  box-shadow: 0 16px 36px -10px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 30px -8px rgba(255, 255, 255, 0.25);
   position: relative;
   z-index: 2;
   overflow: hidden;
+}
+
+[data-theme="light"] .about-avatar {
+  border-color: #000000;
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.2);
 }
 
 .about-photo {
